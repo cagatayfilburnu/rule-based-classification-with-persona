@@ -7,7 +7,7 @@
 A game company wants to create **level-based new customer definitions that is personas** using some features of it's customers. Also, company's aim to create **segments** according to these new customer definitions and to estimate how much the new customers can earn on average according to these segments.
 
 For example:
-It is desired to determine how much a 25-year-old male user from Turkey, who is an IOS user, can earn on average.
+It is desired to determine how much a 25-year-old male user from Türkiye, who is an IOS user, can earn on average.
 
 ---
 ### **Story of Dataset**
