@@ -26,22 +26,21 @@ def check_df(dataframe, head=5):
     print("################ Head ##################")
     print(dataframe.head(head))
     print("################ Tail ##################")
-    if df.isnull().values.any():
+    print(dataframe.tail(head))
+    print("################ NA ##################")
+    if dataframe.isnull().values.any():
         print(dataframe.isnull().sum())
     else:
         print("There is no NA")
     print("################ Quantiles ##################")
     print(dataframe.describe([0, 0.05, 0.50, 0.95, 0.99, 1]).T)
-    print("################ Unique Values for Each Column ##################")
-    for col_name in dataframe.columns:
-        print(f"{col_name}: {dataframe[col_name].unique()}\n  Total {dataframe[col_name].nunique()} unique values.")
     print("################ Value Counts for Each Column ##################")
     for col in dataframe.columns:
         if dataframe[col].nunique() > 10:
-            print("Too many elements for {}".format(col))
+            print("Too many elements for *{}*".format(col))
             continue
         else:
-            print(dataframe[col].value_counts())
+            print(f"{col}: {dataframe[col].value_counts()}")
 
 
 def categorical_ratio(dataframe, col_name, plot=False):
